@@ -1,0 +1,268 @@
+/* =========================
+   THEME VARIABLES
+========================= */
+:root{
+  --bg:#0f172a;
+  --card:#111827;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --primary:#38bdf8;
+  --danger:#f87171;
+  --border:#1f2937;
+}
+
+body.light{
+  --bg:#f3f4f6;
+  --card:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --primary:#2563eb;
+  --danger:#dc2626;
+  --border:#e5e7eb;
+}
+
+/* =========================
+   BASE
+========================= */
+*{
+  box-sizing:border-box;
+  font-family:"Segoe UI", Arial, sans-serif;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  background:var(--bg);
+  color:var(--text);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  transition:.3s;
+}
+
+/* =========================
+   CARD
+========================= */
+.container{
+  width:100%;
+  max-width:400px;
+  margin:48px auto 18px;
+  background:var(--card);
+  padding:22px;
+  border-radius:14px;
+  box-shadow:
+    0 0 0 1px var(--border),
+    0 18px 40px rgba(0,0,0,.45);
+  animation:fadeIn .35s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:none}
+}
+
+/* =========================
+   TITLE
+========================= */
+h2{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:6px;
+  font-size:18px;
+  margin-bottom:16px;
+  font-weight:600;
+}
+
+/* =========================
+   FORM
+========================= */
+form{
+  display:flex;
+  gap:8px;
+}
+
+input{
+  flex:1;
+  padding:9px 11px;
+  border-radius:8px;
+  border:1px solid var(--border);
+  background:#020617;
+  color:var(--text);
+  font-size:14px;
+}
+
+body.light input{background:#f9fafb}
+
+input:focus{
+  outline:none;
+  border-color:var(--primary);
+  box-shadow:0 0 0 2px rgba(56,189,248,.15);
+}
+
+/* =========================
+   BUTTON (ADD)
+========================= */
+button{
+  padding:9px 12px;
+  border:none;
+  border-radius:8px;
+  background:linear-gradient(135deg,#38bdf8,#6366f1);
+  color:#fff;
+  cursor:pointer;
+  transition:.2s;
+}
+
+button:hover{
+  transform:translateY(-1px);
+  box-shadow:0 6px 16px rgba(56,189,248,.35);
+}
+
+/* =========================
+   USER LIST
+========================= */
+.user-list{margin-top:16px}
+
+.user-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:9px 0;
+  border-bottom:1px solid var(--border);
+}
+
+.username{
+  font-size:14px;
+  font-weight:500;
+}
+
+/* =========================
+   ACTION ICONS
+========================= */
+.actions{
+  display:flex;
+  gap:6px;
+  align-items:center;
+}
+
+.actions a,
+.delete-icon{
+  width:26px;
+  height:26px;
+  border-radius:6px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:none;
+  border:none;
+  cursor:pointer;
+  transition:.15s;
+  padding:0;
+}
+
+.actions a svg,
+.delete-icon svg{
+  width:14px;
+  height:14px;
+  stroke-width:2;
+}
+
+/* edit */
+.actions .edit{
+  color:var(--primary);
+}
+.actions .edit:hover{
+  background:rgba(56,189,248,.15);
+}
+
+/* delete */
+.delete-icon{
+  color:var(--danger);
+}
+.delete-icon:hover{
+  background:rgba(248,113,113,.15);
+}
+
+.delete-form{margin:0}
+
+/* =========================
+   FOOTER
+========================= */
+.footer{
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:16px;
+  display:flex;
+  gap:5px;
+  align-items:center;
+}
+
+/* =========================
+   THEME TOGGLE
+========================= */
+.theme-toggle{
+  position:fixed;
+  top:14px;
+  right:14px;
+  padding:6px 8px;
+  border-radius:7px;
+  border:1px solid var(--border);
+  background:#020617;
+  color:#fff;
+  cursor:pointer;
+  transition:.2s;
+}
+
+body.light .theme-toggle{
+  background:#fff;
+  color:#111;
+}
+
+.theme-toggle svg{
+  width:16px;
+  height:16px;
+}
+
+/* =========================
+   BACK BUTTON (EDIT PAGE)
+========================= */
+.back-wrapper{
+  margin-top:18px;
+  display:flex;
+  justify-content:center;
+}
+
+.back-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:8px 14px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:500;
+  color:var(--primary);
+  border:1px solid var(--border);
+  background:transparent;
+  transition:.2s;
+}
+
+.back-btn svg{
+  width:14px;
+  height:14px;
+}
+
+.back-btn:hover{
+  background:rgba(56,189,248,.12);
+  transform:translateY(-1px);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+@media(max-width:480px){
+  .container{margin:28px 10px;padding:20px}
+  form{flex-direction:column}
+  button{width:100%}
+}
