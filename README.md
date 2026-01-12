@@ -33,10 +33,13 @@ screenshots/
  └── edit.png
 ````
 
-```md
+## Screenshots
+
+### Home Page
 ![Home Page](screenshots/home.png)
+
+### Edit User
 ![Edit User](screenshots/edit.png)
-```
 
 ---
 
