@@ -17,16 +17,6 @@ This project is suitable for learning purposes, small internal tools, and as a p
 
 ## 🖼️ Screenshots
 
-> *(Add your screenshots in the `screenshots/` folder)*
-
-```text
-screenshots/
- ├── home.png
- └── edit.png
-````
-
-## Screenshots
-
 ### Home Page
 ![Home Page](screenshots/home.png)
 
