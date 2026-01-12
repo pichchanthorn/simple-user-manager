@@ -1,16 +1,8 @@
-ល្អណាស់ 👍 Project របស់អ្នកអាចធ្វើ README ឲ្យមើលទៅ **professional / portfolio-ready** បាន។ ខាងក្រោមនេះជាកំណែដែលបានកែរួច ស្អាត ប្រើបានភ្លាមសម្រាប់ GitHub 👇
-
-អ្នកអាច copy ទាំងអស់ទៅដាក់ក្នុង `README.md` បានតែម្ដង។
-
----
-
-````md
 # Simple User Manager (PHP & MySQL)
 
 A lightweight and secure CRUD user management system built with **PHP** and **MySQL**, featuring a modern UI, CSRF protection, and dark/light theme support.  
 This project is suitable for learning purposes, small internal tools, and as a portfolio demonstration.
 
----
 
 ## 🚀 Features
 
